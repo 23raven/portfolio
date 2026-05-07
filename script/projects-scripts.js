@@ -2,61 +2,16 @@
 const projectsData = [
 
     {
-        imageSrc: "images/banners/banner-java-dbwizard.jpg",
-        title: "Database Wizard",
-        description: "Database Wizard is a tool for managing database tables through an intuitive web interface",
-        techIconSrc: "images/icons/ic-tech-java.png",
-        githubLink: "https://github.com/iskandar-rassulov/jvsp24-dbwz",
-        viewLink: "https://www.youtube.com/watch?v=D8zTbJWPgSg"
+        imageSrc: "images/banners/banner_solar.png",
+        title: "Solar System",
+        description: "A Unity 3D project featuring an interactive Solar System with a simple orbit mini game and visual progression",
+        techIconSrc: "images/icons/ic-tech-unity.png",
+        githubLink: "https://github.com/23raven/Unity_Solar-System",
+        youtubeLink: "https://www.youtube.com/watch?v=e2kvKioneVA",
+        viewLink: "https://23raven.itch.io/solar-system"
     },
-    {
-        imageSrc: "images/banners/banner-java-fileconv.jpg",
-        title: "File Converter",
-        description: "This application allows you to convert images, audio, video and documents to various formats right from your browser",
-        techIconSrc: "images/icons/ic-tech-java.png",
-        githubLink: "https://github.com/iskandar-rassulov/jvsp24-flcv",
-        viewLink: "https://www.youtube.com/watch?v=M_9XGhGIzjk&pp=0gcJCXcA-SJGOe9V"
-    },
-    {
-        imageSrc: "images/banners/banner-java-medrec.jpg",
-        title: "Medical Records",
-        description: "Medical Records Management System is a simplified system for managing electronic medical records",
-        techIconSrc: "images/icons/ic-tech-java.png",
-        githubLink: "https://github.com/iskandar-rassulov/jvfx24-mrms",
-        viewLink: "https://www.youtube.com/watch?v=80VjwO4nTTg"
-    },
-    {
-        imageSrc: "images/banners/banner-js-lofipom.jpg",
-        title: "Lofi Pomodoro",
-        description: "Lofi Pomodoro is a simple and effective Pomodoro timer with lofi music",
-        techIconSrc: "images/icons/ic-tech-js.png",
-        githubLink: "https://github.com/iskandar-rassulov/js24-lfpm",
-        viewLink: "https://iskandar-rassulov.github.io/js24-lfpm/"
-    },
-    {
-        imageSrc: "images/banners/banner-js-katakana.png",
-        title: "Katakana Quiz",
-        description: "A project to learn and practice katakana and hiragana with a simple quiz",
-        techIconSrc: "images/icons/ic-tech-js.png",
-        githubLink: "https://github.com/iskandar-rassulov/js24-ktkn",
-        viewLink: "https://iskandar-rassulov.github.io/js24-ktkn/"
-    },
-    {
-        imageSrc: "images/banners/banner-js-todo.png",
-        title: "To Do List",
-        description: "A simple To-Do List application written in vanilla JavaScript, HTML, and CSS",
-        techIconSrc: "images/icons/ic-tech-js.png",
-        githubLink: "https://github.com/iskandar-rassulov/js24-tdl",
-        viewLink: "https://iskandar-rassulov.github.io/js24-tdl/"
-    },
-    {
-        imageSrc: "images/banners/banner-js-qrcode.png",
-        title: "QR Code Generator",
-        description: "Simple QR code generator [text and url]",
-        techIconSrc: "images/icons/ic-tech-js.png",
-        githubLink: "https://github.com/iskandar-rassulov/js24-qrcg",
-        viewLink: "https://iskandar-rassulov.github.io/js24-qrcg/"
-    },
+   
+    
     
 ];
 
@@ -104,8 +59,18 @@ function createProjectTile(project) {
     viewImage.alt = "View Button";
     viewButton.appendChild(viewImage);
 
+    const youtubeButton = document.createElement('a');
+    youtubeButton.className = 'youtube-button';
+    youtubeButton.href = project.youtubeLink;
+    youtubeButton.target = "_blank";
+    const youtubeImage = document.createElement('img');
+    youtubeImage.src = "images/icons/ic-youtube-project.png";
+    youtubeImage.alt = "YouTube Button";
+    youtubeButton.appendChild(youtubeImage);
+
     projectButtons.appendChild(techIcon);
     projectButtons.appendChild(githubButton);
+    projectButtons.appendChild(youtubeButton);
     projectButtons.appendChild(viewButton);
 
     projectTile.appendChild(projectImage);
