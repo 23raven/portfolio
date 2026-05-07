@@ -1,0 +1,265 @@
+body {
+    width: 100%;
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+}
+
+#information {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали (опционально) */
+    height: 30vh; /* Настрой высоту по необходимости */
+    width: 100vw; /* Настрой ширину по необходимости */
+}
+
+.info-container{
+    display: grid;
+    height: 20vh;
+    width: 40vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "tile-name tile-image tile-about tile-download"
+    "tile-position tile-image tile-education tile-education"
+    "tile-links tile-links tile-education tile-education";
+    grid-gap: 1vh;
+}
+
+.tile-name{
+    background-color: #333;
+    width: 10vw;
+    height: 9vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    grid-area: tile-name;
+}
+
+.tile-position{
+    background-color: white;
+    width: 10vw;
+    height: 9vh;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    grid-area: tile-position;
+}
+
+.tile-image{
+    background-image: url('../images/avatar.jpg');
+    background-size: cover;
+    width: 10vw;
+    height: 20vh;
+    border-radius: 20px;
+    grid-area: tile-image;
+}
+
+.tile-links {
+    overflow-y: hidden;
+    overflow-x: auto;
+    background-color: #333;
+    width: 20vw;
+    height: 4vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    padding: 0 10px;
+    grid-area: tile-links;
+}
+
+.tile-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.tile-links a:hover {
+    color: white;
+    text-decoration: underline;
+    font-size: 0.8rem;
+}
+
+.tile-about{
+    overflow-y: auto;
+    background-color: white;
+    width: 10vw;
+    height: 9vh;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.7rem;
+    border-radius: 20px;
+    grid-area: tile-about;
+}
+
+.tile-download{
+    overflow-x: auto;
+    background-color: #333;
+    width: 7vw;
+    height: 9vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    user-select: none; /* 1. Запрет выделения текста */
+    cursor: pointer; /* 2. Курсор в виде руки */
+    grid-area: tile-download;
+}
+
+.tile-download:hover{
+    background-color: #222;
+}
+
+.tile-education {
+    overflow-y: auto;
+    background-color: white;
+    width: 17.5vw;
+    height: 14.5vh;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.7rem;
+    color:#333;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+    grid-area: tile-education;
+}
+
+.university {
+    display: flex;
+    align-items: center;
+    padding-left: 4vh;
+}
+
+.university img {
+    width: 2vw;
+    height: 4vh;
+    margin-right: 1vh;
+    border-radius: 10px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*PROJECTS*/
+.tile-project {
+    background-color: white;
+    width: 12vw; /* Ширина */
+    height: 40vh; /* Высота */
+    border-radius: 20px; /* Закругленные углы */
+    position: relative; /* Необходимо для позиционирования вложенного элемента */
+}
+
+
+.tile-project-image {
+    width: 12vw;
+    height: 16vh;
+    border-radius: 20px 20px 0 0; /* Закругленные углы только сверху */
+    object-fit: cover;
+    display: block;
+}
+
+.tile-project-title {
+    text-align: center; /* Центрирование текста */
+    margin-top: 2vh; /* Отступ сверху */
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: -1vh;
+}
+
+.tile-project-description {
+    height: 11vh;
+    text-align: center; /* Центрирование текста */
+    margin-right: 1vh;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 10px; /* Отступы по бокам */
+    overflow-y: auto; /* Добавляет вертикальный скроллбар, если содержимое выходит за пределы */
+    overflow-x: hidden; /* Скрывает горизонтальный скроллбар */
+}
+
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрирует элементы по вертикали */
+    gap: 1vw;
+}
+
+
+.project-buttons a img {
+    height: 3vh; /* Устанавливает высоту изображений кнопок */
+    width: 3vh; /* Сохраняет пропорции изображения */
+}
+
+.github-button img {
+    height: 3vh;
+    width: 3vh;
+    transition: filter 0.2s ease; /* Плавный переход для фильтра */
+}
+
+.github-button:hover img {
+    filter: invert(60%);
+}
+
+.view-button img {
+    height: 3vh;
+    width: 3vh;
+    transition: filter 0.3s ease; /* Плавный переход для фильтра */
+}
+
+.view-button:hover img {
+    filter: brightness(1.2); /* Увеличиваем яркость на 20% */
+}
+
+.tech-icon{
+    height: 3.5vh;
+    width: 3.5vh;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+#projects {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали (опционально) */
+    height: 30vh; /* Настрой высоту по необходимости */
+    width: 100vw; /* Настрой ширину по необходимости */
+}
+
+.project-container{
+    display: grid;
+    height: 25vh;
+    width: 40vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2vh;
+}
+
+
