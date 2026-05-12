@@ -10,7 +10,15 @@ const projectsData = [
         youtubeLink: "https://www.youtube.com/watch?v=e2kvKioneVA",
         viewLink: "https://23raven.itch.io/solar-system"
     },
-   
+    {
+        imageSrc: "images/banners/banner_rollball.png",
+        title: "Roll-a-Ball",
+        description: "Simple 3D game made with Unity where the player controls a rolling ball and interacts with objects on the level.",
+        techIconSrc: "images/icons/ic-tech-unity.png",
+        githubLink: "https://github.com/23raven/Unity_Rolling-Ball",
+        youtubeLink: "https://www.youtube.com/watch?v=F68Bac06U3c",
+        viewLink: "https://23raven.itch.io"
+    },   
     
     
 ];
