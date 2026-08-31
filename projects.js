@@ -1,6 +1,6 @@
 const projects = [
     {
-        title: "Solar System",
+        title: "Project Name",
         technologies: "Unity · C#",
         description: "Short description of the project, its purpose and what was implemented.",
         logo: "images/f2.jpg",
@@ -16,12 +16,30 @@ const projects = [
             youtube: "#",
             github: "#"
         }
+    },
+    {
+        title: "Solar",
+        technologies: "Unity · C#",
+        description: "Short description of the project, its purpose and what was implemented.",
+        logo: "images/f2.jpg",
+
+        tags: [
+            "pet-project",
+            "game-jam"
+        ],
+
+        links: {
+            itch: "#",
+            youtube: "#",
+            github: "#"
+        }
     }
 ];
 
 
 function renderProjects() {
     const container = document.querySelector(".projects-tiles");
+    const tagsContainer = document.querySelector(".project-tags-filter");
 
     if (!container) {
         return;
@@ -29,11 +47,18 @@ function renderProjects() {
 
     container.innerHTML = "";
 
+    const allTags = new Set();
+
     projects.forEach((project) => {
+        project.tags.forEach((tag) => {
+            allTags.add(tag);
+        });
+
         const tile = document.createElement("div");
 
         tile.className = "project-tile";
         tile.dataset.title = project.title.toLowerCase();
+        tile.dataset.tags = project.tags.join(" ");
 
         const tags = project.tags
             .map((tag) => `<span>#${tag}</span>`)
@@ -81,8 +106,27 @@ function renderProjects() {
 
         container.appendChild(tile);
     });
-}
 
+
+    if (tagsContainer) {
+        tagsContainer.innerHTML = "";
+
+        const allButton = document.createElement("button");
+        allButton.textContent = "ALL";
+        allButton.dataset.tag = "all";
+
+        tagsContainer.appendChild(allButton);
+
+        allTags.forEach((tag) => {
+            const button = document.createElement("button");
+
+            button.textContent = `#${tag}`;
+            button.dataset.tag = tag;
+
+            tagsContainer.appendChild(button);
+        });
+    }
+}
 
 
 document.addEventListener("DOMContentLoaded", renderProjects);
