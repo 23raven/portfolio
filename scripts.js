@@ -66,5 +66,11 @@ tagsFilter.addEventListener('click', (event) => {
 
     activeTag = button.dataset.tag;
 
+    tagsFilter.querySelectorAll('button').forEach((tagButton) => {
+        tagButton.classList.remove('active');
+    });
+
+    button.classList.add('active');
+
     filterProjects();
 });

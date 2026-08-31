@@ -545,5 +545,12 @@ body {
     font-size: 0.8rem;
 
     cursor: pointer;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-tags-filter button.active {
+    background-color: #333;
+    color: #fff;
 }
 

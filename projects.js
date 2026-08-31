@@ -114,6 +114,8 @@ function renderProjects() {
         const allButton = document.createElement("button");
         allButton.textContent = "ALL";
         allButton.dataset.tag = "all";
+        
+        allButton.classList.add('active');
 
         tagsContainer.appendChild(allButton);
 
