@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet"
+    >
 
     <title>Portfolio</title>
 
@@ -14,13 +19,21 @@
 
 <body>
 
+    <!-- HERO -->
     <main class="tiles">
-        <div class="tile tile-full-name">Iskander Rassulov</div>
-        
-        <div class="tile tile-position">Game Developer</div>
-        
-        <div class="tile-photo"><img src="images/photo.jpg" alt="Photo"></div>
-        
+
+        <div class="tile tile-full-name">
+            Iskander Rassulov
+        </div>
+
+        <div class="tile tile-position">
+            Game Developer
+        </div>
+
+        <div class="tile-photo">
+            <img src="images/photo.jpg" alt="Photo">
+        </div>
+
         <div class="tile-education">
             <img src="images/logo-sdu.jpg" alt="University Logo">
 
@@ -41,9 +54,8 @@
             DOWNLOAD CV
         </a>
 
-        
-        
         <div class="tile-links">
+
             <a href="mailto:iskander.rassulov.2002@gmail.com">
                 iskander.rassulov.2002@gmail.com
             </a>
@@ -62,112 +74,76 @@
 
             <a href="#" target="_blank">
                 Telegram
-            </a> 
+            </a>
 
             <a href="#" target="_blank">
                 Youtube
-            </a> 
+            </a>
+
         </div>
-        
-                 
-        
+
     </main>
-    
+
+
+    <!-- EXPERIENCE -->
     <section class="experience-section">
 
-    <div class="section-divider">
-        <span>EXPERIENCE</span>
-    </div>
-
-    <div class="experience-tiles">
-
-        <div class="experience-tile">
-            <div class="experience-company">Prime Food Factory</div>
-            <div class="experience-position">Operations Analyst</div>
-            <div class="experience-description">
-                Description of work and responsibilities. Description of work and responsibilities.
-                Description of work and responsibilities. Description of work and responsibilities.
-            </div>
-            <div class="experience-date">Aug 2025 — Aug 2026</div>
+        <div class="section-divider">
+            <span>EXPERIENCE</span>
         </div>
 
-    </div>
+        <div class="experience-tiles"></div>
+
     </section>
 
+
+    <!-- PROJECTS -->
     <section class="projects-section">
 
-    <div class="section-divider">
-        <span>PROJECTS</span>
-    </div>
-
-    <div class="project-controls">
-
-    <button class="project-control" id="tags-button">
-        #
-    </button>
-
-    <button class="project-control" id="search-button">
-        ⌕
-    </button>
-
-</div>
-
-<div class="project-tags-filter" id="tags-filter">
-    <button>ALL</button>
-    <button>#pet-project</button>
-    <button>#game-jam</button>
-    <button>#mechanics</button>
-</div>
-
-<div class="project-search" id="project-search">
-    <input
-        type="text"
-        id="project-search-input"
-        placeholder="Search projects..."
-    >
-</div>
-
-    <div class="projects-tiles">
-        
-    <div class="project-tile">
-
-    <div class="project-logo">
-        <img src="images/f2.jpg" alt="Project Logo">
-    </div>
-
-    <div class="project-content">
-        <div class="project-title" data-search="project name unity c# game jam mechanics">Project Name</div>
-            <div class="project-tags">
-                <span>#pet-project</span>
-                <span>#game-jam</span>
-                <span>#mechanics</span>
-        </div>
-        <div class="project-technologies">
-            Unity · C#
+        <div class="section-divider">
+            <span>PROJECTS</span>
         </div>
 
-        <div class="project-description">
-            Short description of the project, its purpose and what was implemented.
+        <div class="project-controls">
+
+            <button class="project-control" id="tags-button">
+                #
+            </button>
+
+            <button class="project-control" id="search-button">
+                ⌕
+            </button>
+
         </div>
 
-        <div class="project-links">
-            <a href="#" target="_blank">Itch.io</a>
-            <a href="#" target="_blank">YouTube</a>
-            <a href="#" target="_blank">Github</a>
+        <div class="project-tags-filter" id="tags-filter">
+
+            <button>ALL</button>
+            <button>#pet-project</button>
+            <button>#game-jam</button>
+            <button>#mechanics</button>
+
         </div>
 
-        
+        <div class="project-search" id="project-search">
 
-    </div>
+            <input
+                type="text"
+                id="project-search-input"
+                placeholder="Search projects..."
+            >
 
-    </div>
+        </div>
 
-    
-    </div>
+        <div class="projects-tiles"></div>
 
-    
-</section>
+    </section>
 
+
+    <!-- SCRIPTS -->
+    <script src="experience.js"></script>
+    <script src="projects.js"></script>
     <script src="scripts.js"></script>
+
 </body>
 </html>
