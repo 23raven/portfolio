@@ -6,8 +6,8 @@ const experiences = [
         description: [
             "Managed and organized internal and local document workflows",
             "Prepared official documentation for the sale of goods and services and coordinated with the accounting department",
-            "Prepared documentation to verify the proper use of loan funds for the bank and Damu Fund, and coordinated with external appraisers",
-            "Verified incoming goods against supporting documentation and coordinated workflows between warehouse, production, accounting and external organizations."
+            "Prepared documentation to verify the proper use of loan funds for the bank and Damu Fund (160M KZT) and coordinated with external appraisers",
+            "Verified incoming goods against supporting documentation and coordinated workflows between warehouse, production, accounting and external organizations"
         ],
 
         date: "Aug 2025 — Aug 2026"
