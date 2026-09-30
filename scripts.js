@@ -174,7 +174,7 @@
         const isTopPriority = priority === 1;
         const isLarge = localIndex === (mirrored ? 2 : 0);
         const banner = project.banner
-          ? `<div class="project-media"><img class="project-image" src="${project.banner}" alt="${safe(project.name)} banner"></div>`
+          ? `<div class="project-media"><img class="project-image" src="${project.banner}" alt="${safe(project.name)} banner" onerror="this.style.display='none'; this.parentElement.classList.add('project-media--missing');"></div>`
           : '<div class="project-media project-placeholder"><span>+</span></div>';
         const linkItems = Object.entries(project.links || {})
           .filter(([, url]) => url)

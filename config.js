@@ -96,6 +96,18 @@ window.SITE_CONFIG = {
       }
     },
     {
+      name: "Tooth Fairy",
+      tags: ["#pet-project", "#2026"],
+      priority: 1,
+      description: "A small 2D game made in Unity where you play as a Tooth Fairy collecting teeth",
+      banner: "assets/projects/banner-tooth-fairy.png",
+      links: {
+        "GitHub": "https://github.com/23raven/Unity_Tooth-Fairy",
+        "YouTube": "https://www.youtube.com/watch?v=kRUNb_6U_4g&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2F23raven.itch.io%2Ftooth-fairy",
+        "Itch.io": "https://23raven.itch.io/tooth-fairy"
+      }
+    },
+    {
       name: "Tracer FPS",
       tags: ["#reverse-engineering", "#pet-project", "#2026"],
       priority: 1,
@@ -110,25 +122,13 @@ window.SITE_CONFIG = {
     {
       name: "Nova Expedition",
       tags: ["#pet-project", "#2026"],
-      priority: 1,
+      priority: 2,
       description: "A small story-driven adventure game developed with Unity, featuring exploration and puzzle-solving elements",
       banner: "assets/projects/banner-nova.png",
       links: {
         "GitHub": "https://github.com/23raven/Unity_Nova-Expedition-Trials",
         "YouTube": "https://www.youtube.com/watch?v=IYjij2PDPBA",
         "Itch.io": "https://23raven.itch.io/nova-expedition-trials"
-      }
-    },
-    {
-      name: "Tooth Fairy",
-      tags: ["#pet-project", "#2026"],
-      priority: 1,
-      description: "A small 2D game made in Unity where you play as a Tooth Fairy collecting teeth",
-      banner: "assets/projects/banner-tooth-fairy.png",
-      links: {
-        "GitHub": "https://github.com/23raven/Unity_Tooth-Fairy",
-        "YouTube": "https://www.youtube.com/watch?v=kRUNb_6U_4g&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2F23raven.itch.io%2Ftooth-fairy",
-        "Itch.io": "https://23raven.itch.io/tooth-fairy"
       }
     },
   ]};
