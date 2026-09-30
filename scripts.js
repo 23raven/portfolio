@@ -121,7 +121,13 @@
 
   $('skillsList').innerHTML = cfg.skills.map(skill => `<span class="chip">${safe(skill)}</span>`).join('');
 
-  const allTags = [...new Set(cfg.projects.map(project => project.tag).filter(Boolean))];
+  // Projects may use either the legacy `tag` string or the newer `tags` array.
+  const getProjectTags = (project) => {
+    if (Array.isArray(project.tags)) return project.tags.filter(Boolean).map(String);
+    return project.tag ? [String(project.tag)] : [];
+  };
+
+  const allTags = [...new Set(cfg.projects.flatMap(getProjectTags))];
   let activeTag = 'All';
   let searchTerm = '';
 
@@ -146,8 +152,9 @@
   function renderProjects() {
     const filtered = cfg.projects
       .filter(project => {
-        const matchesTag = activeTag === 'All' || project.tag === activeTag;
-        const haystack = [project.name, project.tag, project.description].join(' ').toLowerCase();
+        const projectTags = getProjectTags(project);
+        const matchesTag = activeTag === 'All' || projectTags.includes(activeTag);
+        const haystack = [project.name, ...projectTags, project.description].filter(Boolean).join(' ').toLowerCase();
         const matchesSearch = !searchTerm || haystack.includes(searchTerm);
         return matchesTag && matchesSearch;
       })
@@ -174,6 +181,10 @@
           .map(([key, url]) => `<a class="project-link" href="${url}" target="_blank" rel="noreferrer">${safe(key)} <span>↗</span></a>`)
           .join('');
         const description = project.description ? `<p>${safe(project.description)}</p>` : '';
+        const projectTags = getProjectTags(project);
+        const tagMarkup = projectTags.length
+          ? `<div class="project-tags">${projectTags.map(tag => `<span class="project-tag">${safe(tag)}</span>`).join('')}</div>`
+          : '';
         const priorityMark = isTopPriority
           ? '<span class="project-rank project-rank--top">01 · HIGH</span>'
           : `<span class="project-rank">${String(absoluteIndex + 1).padStart(2, '0')}</span>`;
@@ -184,7 +195,7 @@
               ${banner}
               <div class="project-media-overlay">
                 ${priorityMark}
-                <span class="project-tag">${safe(project.tag)}</span>
+                ${tagMarkup}
               </div>
             </div>
             <div class="project-content">

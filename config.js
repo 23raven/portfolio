@@ -6,17 +6,17 @@
 
 window.SITE_CONFIG = {
   site: {
-    title: "Iskandar Rassulov — Game Developer",
-    description: "Personal website and portfolio of Iskandar Rassulov.",
+    title: "Iskander Rassulov",
+    description: "Personal website and portfolio of Iskander Rassulov.",
   },
 
   profile: {
-    name: "Iskandar Rassulov",
+    name: "Iskander Rassulov",
     role: "Game Developer",
     email: "iskander.rassulov.2002@gmail.com",
     age: 24,
     photo: "assets/photo.png",
-    tagline: "Building games, interactive experiences and systems.",
+    tagline: "Building games, interactive experiences and systems",
     meta: [
       { label: "Focus", text: "Unity · C#" },
       { label: "Languages", text: "Russian, English, Kazakh" },
@@ -32,7 +32,7 @@ window.SITE_CONFIG = {
   },
 
   about: {
-    text: "Game developer focused on Unity, 2D gameplay systems, prototyping and clean interfaces."
+    text: "Game developer focused on Unity, 2D gameplay systems, prototyping and clean interfaces"
   },
 
   education: {
@@ -57,15 +57,11 @@ window.SITE_CONFIG = {
     }
   ],
   skills: [
-    "Unity",
+    "Unity 3D",
     "C#",
-    "2D Game Development",
-    "Gameplay Programming",
-    "UI / UX",
-    "Blender",
     "Git",
-    "JavaScript",
-    "HTML / CSS"
+    "Unity 2D",
+    "ScriptableObject Architecture"
   ],
 
   links: [
@@ -89,14 +85,50 @@ window.SITE_CONFIG = {
   projects: [
     {
       name: "Zero Direction",
-      tag: "#gamejam",
+      tags: ["#gamejam", "#2026"],
       priority: 1,
-      description: "A platformer created during Do You WANNA Jam?! 2026, built around dynamic gravity direction changes as the core gameplay mechanic.",
-      banner: "assets/projects/BANNER_Zero-Direction.png",
+      description: "A platformer created during Do You WANNA Jam?! 2026, built around dynamic gravity direction changes as the core gameplay mechanic",
+      banner: "assets/projects/banner-zero.png",
       links: {
         "GitHub": "https://github.com/23raven/Zero-Direction",
         "YouTube": "https://www.youtube.com/watch?v=Cr8du3bMqoM&feature=youtu.be",
         "Itch.io": "https://23raven.itch.io/zero-direction"
       }
-    }
+    },
+    {
+      name: "Tracer FPS",
+      tags: ["#reverse-engineering", "#pet-project", "#2026"],
+      priority: 1,
+      description: "A Unity gameplay project inspired by Tracer from Overwatch, featuring a custom movement system and mechanics",
+      banner: "assets/projects/banner-tracer.png",
+      links: {
+        "GitHub": "https://github.com/23raven/Unity_TracerFPS",
+        "YouTube": "https://www.youtube.com/watch?v=bb6q8can3Yo",
+        "Itch.io": "https://23raven.itch.io/tracerfps"
+      }
+    },
+    {
+      name: "Nova Expedition",
+      tags: ["#pet-project", "#2026"],
+      priority: 1,
+      description: "A small story-driven adventure game developed with Unity, featuring exploration and puzzle-solving elements",
+      banner: "assets/projects/banner-nova.png",
+      links: {
+        "GitHub": "https://github.com/23raven/Unity_Nova-Expedition-Trials",
+        "YouTube": "https://www.youtube.com/watch?v=IYjij2PDPBA",
+        "Itch.io": "https://23raven.itch.io/nova-expedition-trials"
+      }
+    },
+    {
+      name: "Tooth Fairy",
+      tags: ["#pet-project", "#2026"],
+      priority: 1,
+      description: "A small 2D game made in Unity where you play as a Tooth Fairy collecting teeth",
+      banner: "assets/projects/banner-tooth-fairy.png",
+      links: {
+        "GitHub": "https://github.com/23raven/Unity_Tooth-Fairy",
+        "YouTube": "https://www.youtube.com/watch?v=kRUNb_6U_4g&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2F23raven.itch.io%2Ftooth-fairy",
+        "Itch.io": "https://23raven.itch.io/tooth-fairy"
+      }
+    },
   ]};
