@@ -1,147 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" type="image/png" href="images/icon_tab.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet"
-    >
-
-    <title>Iskandar Rassulov</title>
-
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f4f1">
+  <title>Personal Website</title>
+  <meta name="description" content="Personal portfolio website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="topbar__name" id="topbarName"></div>
+      <div class="topbar__role" id="topbarRole"></div>
+      <a class="topbar__contact" id="topbarContact" href="#"></a>
+    </header>
 
-    <!-- HERO -->
-    <main class="tiles">
+    <main>
+      <section class="hero-grid" aria-label="Profile">
+        <article class="tile tile--dark hero-name">
+          <div class="eyebrow">PERSONAL WEBSITE</div>
+          <h1 id="heroName"></h1>
+          <p id="heroRole"></p>
+        </article>
 
-        <div class="tile tile-full-name">
-            Iskandar Rassulov
-        </div>
+        <article class="tile hero-photo tile--photo">
+          <img id="profileImage" alt="Profile photo">
+        </article>
 
-        <div class="tile tile-position">
-            Game Developer
-        </div>
+        <article class="tile hero-meta">
+          <div id="heroMeta" class="meta-list"></div>
+        </article>
 
-        <div class="tile-photo">
-            <img src="images/photo.png" alt="Photo">
-        </div>
-
-        <div class="tile-education">
-            <img src="images/logo-sdu.jpg" alt="University Logo">
-
-            <div class="education-info">
-                <div>Suleyman Demirel University</div>
-                <div>Bachelor's Degree · Computer Science</div>
-                <div>2019 — 2023</div>
-            </div>
-        </div>
-
-        <div class="tile-info">
-            <div>🛠️ Unity, C#</div>
-            <div>🗣️ Russian, English, Kazakh</div>
-            <div>📍 Kazakhstan, Remote</div>
-        </div>
-
-        <a class="tile-download-cv" href="docs/CV_ENG.pdf" download>
-            DOWNLOAD CV
+        <a class="tile tile--dark hero-cv" id="cvLink" download="eng_cv.pdf">
+          <span>DOWNLOAD CV</span>
+          <span class="tile-arrow">↗</span>
         </a>
 
-        <div class="tile-links">
+        <article class="tile hero-tagline">
+          <span id="tagline"></span>
+        </article>
 
-            <a href="mailto:iskander.rassulov.2002@gmail.com">
-                iskander.rassulov.2002@gmail.com
-            </a>
+        <article class="tile hero-experience experience-tile">
+          <div class="tile-header"><h2>Experience</h2><span class="plus">+</span></div>
+          <div id="experienceList" class="timeline"></div>
+        </article>
 
-            <a href="https://github.com/23raven" target="_blank">
-                GitHub
-            </a>
+        <article class="tile hero-decoration">
+          <img id="decorationImage" alt="">
+        </article>
+      </section>
 
-            <a href="https://www.linkedin.com/in/iskandar-rassulov-773145429/" target="_blank">
-                LinkedIn
-            </a>
+      <section class="section-grid" aria-label="About and Education">
+        <article class="tile tile--accent section-heading">
+          <span class="section-heading__mark">+</span>
+          <h2>About</h2>
+          <p id="aboutText"></p>
+        </article>
 
-            <a href="https://23raven.itch.io/" target="_blank">
-                Itch.io
-            </a>
+        <article class="tile education-tile section-education-tile">
+          <div class="edu-icon-wrap"><img id="educationLogo" alt=""></div>
+          <div>
+            <div class="tile-kicker">EDUCATION</div>
+            <h2 id="educationUniversity"></h2>
+            <p id="educationDegree"></p>
+            <p id="educationYears"></p>
+          </div>
+        </article>
 
-            <a href="https://t.me/iskan23tg" target="_blank">
-                Telegram • @iskan23tg
-            </a>
+        <article class="tile skills-tile">
+          <div class="tile-header"><h2>Skills</h2><span class="plus">+</span></div>
+          <div id="skillsList" class="chip-list"></div>
+        </article>
+      </section>
 
-            <a href="https://www.youtube.com/@23raven" target="_blank">
-                Youtube
-            </a>
-
-            <a href="https://discord.com/users/1487857481224028242" target="_blank">
-                Discord
-            </a>
-
+      <section class="projects-section" aria-label="Projects">
+        <div class="projects-topbar">
+          <div>
+            <div class="eyebrow">SELECTED WORK</div>
+            <h2>Projects</h2>
+          </div>
+          <div class="project-search">
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input id="projectSearch" type="search" placeholder="Search projects…" autocomplete="off">
+            </label>
+            <div class="tag-filters" id="tagFilters"></div>
+          </div>
         </div>
+        <div class="project-grid" id="projectGrid"></div>
+        <div class="no-results" id="noResults" hidden>No projects found.</div>
+      </section>
 
+      <section class="links-section" aria-label="Links">
+        <div class="links-heading">
+          <div class="eyebrow">CONTACT & SOCIAL</div>
+          <h2>Links</h2>
+        </div>
+        <div class="links-grid" id="linksGrid"></div>
+      </section>
     </main>
 
+    <footer class="footer">
+      <span id="footerName"></span>
+      <span id="footerYear"></span>
+    </footer>
+  </div>
 
-    <!-- EXPERIENCE -->
-    <section class="experience-section">
-
-        <div class="section-divider">
-            <span>EXPERIENCE</span>
-        </div>
-
-        <div class="experience-tiles"></div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-    <section class="projects-section">
-
-        <div class="section-divider">
-            <span>PROJECTS</span>
-        </div>
-
-        <div class="project-controls">
-
-            <button class="project-control" id="tags-button">
-                #
-            </button>
-
-            <button class="project-control" id="search-button">
-                ⌕
-            </button>
-
-        </div>
-
-        <div class="project-tags-filter" id="tags-filter"></div>
-
-        <div class="project-search" id="project-search">
-
-            <input
-                type="text"
-                id="project-search-input"
-                placeholder="Search projects..."
-            >
-
-        </div>
-
-        <div class="projects-tiles"></div>
-
-    </section>
-
-
-    <!-- SCRIPTS -->
-    <script src="experience.js"></script>
-    <script src="projects.js"></script>
-    <script src="scripts.js"></script>
-
+  <script src="config.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
