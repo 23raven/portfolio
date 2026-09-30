@@ -605,7 +605,73 @@ button, input { font: inherit; }
   .page-shell { width: min(100% - 18px, 620px); padding-top: 10px; }
   .topbar { grid-template-columns: 1fr; gap: 4px; text-align: left; }
   .topbar__role, .topbar__contact { text-align: left; }
-  .hero-grid, .section-grid, .links-grid { grid-template-columns: 1fr; }
+
+  /* Compact mobile tile system: keep the page airy without making every tile full-width. */
+  .hero-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    gap: 10px;
+  }
+  .hero-name { grid-column: 1; grid-row: 1; min-height: 205px; }
+  .hero-photo {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+  }
+  .hero-photo img {
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-meta {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    min-height: 164px;
+  }
+  .hero-cv {
+    grid-column: 1;
+    grid-row: 3;
+    min-height: 150px;
+  }
+  .hero-tagline {
+    grid-column: 2;
+    grid-row: 3;
+    min-height: 150px;
+  }
+  .hero-experience {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    min-height: 250px;
+  }
+  .hero-decoration {
+    grid-column: 1;
+    grid-row: 5;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .section-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .section-heading {
+    grid-column: 1;
+    min-height: 220px;
+    grid-row: auto;
+  }
+  .section-education-tile {
+    grid-column: 2;
+    grid-row: auto;
+    min-height: 220px;
+  }
+  .skills-tile {
+    grid-column: 1 / -1;
+    min-height: 180px;
+  }
+  .education-tile { min-height: 220px; }
+
   .project-mosaic-group, .project-mosaic-group--right, .project-mosaic-group--count-2 {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -618,11 +684,7 @@ button, input { font: inherit; }
     min-height: 0;
     aspect-ratio: 16 / 9;
   }
-  .hero-name, .hero-photo, .hero-meta, .hero-cv, .hero-experience, .project-card, .education-tile, .section-education-tile { grid-column: auto; min-height: unset; grid-row: auto; }
-  .hero-decoration { grid-column: auto; grid-row: auto; width: 100%; aspect-ratio: 1 / 1; }
-  .hero-photo, .hero-photo img { min-height: 300px; }
-  .hero-meta, .hero-cv, .hero-tagline, .hero-experience, .section-heading, .experience-tile, .skills-tile, .education-tile { min-height: 180px; }
-  .hero-meta { min-height: 196px; }
+
   .meta-panel { grid-template-columns: 72px 1fr; gap: 10px; }
   .meta-facts { grid-template-columns: 1fr; }
   .meta-fact--wide { grid-column: auto; }
