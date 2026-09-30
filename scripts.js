@@ -54,8 +54,9 @@
   function initThemeSwitcher() {
     const themes = [
       { id: 'dark', label: 'Dark', color: '#303033' },
-      { id: 'sky', label: 'Sky', color: '#76add4' },
+      { id: 'sky', label: 'Sky', color: '#003566' },
       { id: 'autumn', label: 'Autumn', color: '#e49a64' },
+      { id: 'green', label: 'Green', color: '#4f772d' },
     ];
     const saved = localStorage.getItem('personal-site-theme') || 'dark';
     const switcher = document.createElement('div');
