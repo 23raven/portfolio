@@ -32,7 +32,7 @@ window.SITE_CONFIG = {
   },
 
   about: {
-    text: "Game developer focused on Unity, 2D gameplay systems, prototyping and clean interfaces"
+    text: "Game developer focused on Unity, 2D gameplay systems, prototyping"
   },
 
   education: {
@@ -92,7 +92,8 @@ window.SITE_CONFIG = {
       links: {
         "GitHub": "https://github.com/23raven/Zero-Direction",
         "YouTube": "https://www.youtube.com/watch?v=Cr8du3bMqoM&feature=youtu.be",
-        "Itch.io": "https://23raven.itch.io/zero-direction"
+        "Itch.io": "https://23raven.itch.io/zero-direction",
+        "Gamejam score": "https://itch.io/jam/do-you-wanna-jam-2026/rate/4930724";
       }
     },
     {
