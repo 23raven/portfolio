@@ -15,7 +15,7 @@ window.SITE_CONFIG = {
     role: "Game Developer",
     email: "iskander.rassulov.2002@gmail.com",
     age: 24,
-    photo: "assets/photo.png",
+    photo: "assets/av1.jpg",
     tagline: "Building games, interactive experiences and systems",
     meta: [
       { label: "Focus", text: "Unity · C#" },
